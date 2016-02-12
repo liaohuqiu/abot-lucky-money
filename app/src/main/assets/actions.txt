@@ -1,0 +1,29 @@
+toast                                   =>  toast:
+delay_10000                             =>  delay:10000
+
+has_loading                             =>  has_element:open_lucky_money_loading
+has_been_in_home                        =>  has_element:more_function
+
+no_loading                              =>  no_element:open_lucky_money_loading
+no_new_message                          =>  no_element:new_message
+
+check_lucky_money_item                  =>  check_element:chat_item_lucky_money
+check_new_message                       =>  check_element:new_message
+check_message_item                      =>  check_element:message_item
+
+click_new_message                       =>  click:new_message
+go_back                                 =>  click:go_back
+open_lucky_money_item                   =>  click:chat_item_lucky_money
+close_lucky_money                       =>  click:close_lucky_money
+go_back_in_lucky_money_detail           =>  click:go_back_in_lucky_money_detail
+open_lucky_money                        =>  click:open_lucky_money
+
+open_lucky_money_then_close             =>  open_lucky_money->go_back_in_lucky_money_detail
+after_open_lucky_money                  =>  go_back_in_lucky_money_detail~>open_lucky_money_then_close~>close_lucky_money~>toast~>delay_10000
+process_lucky_money                     =>  open_lucky_money_item->after_open_lucky_money
+try_to_go_to_home                       =>  has_been_in_home|go_back
+process_lucky_money_then_go_back        =>  process_lucky_money->try_to_go_to_home
+try_process_lucky_money_or_go_back      =>  process_lucky_money_then_go_back~>try_to_go_to_home
+new_message_then_process_lucky_money    =>  click_new_message->try_process_lucky_money_or_go_back
+
+main                                    =>  new_message_then_process_lucky_money~>process_lucky_money

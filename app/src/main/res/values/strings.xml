@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">aWeChatBot</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_open_wechat">Open WeChat</string>
+    <string name="text_bot_on">Enable Bot</string>
+    <string name="text_bot_off">Disable Bot</string>
+    <string name="text_restart">Restart</string>
+</resources>
