@@ -1,13 +1,13 @@
-本项目基于 ***ABot*** 实现了微信抢红包功能插件，功能截图如下：
+本项目基于 ***ABot*** 实现了微信抢红包功能插件，设计思路和代码实现都非常简单。
 
-<div><img src='https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/1.gif' width="300px" style='border: #f1f1f1 solid 1px'/></div>
+> [点击下载 APK](https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/app-debug.apk)
 
-<div><img src='https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/2.gif' width="300px" style='border: #f1f1f1 solid 1px'/></div>
+截图如下：
 
-[点击下载 APK](https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/app-debug.apk)
-
-
-设计思路和代码实现都非常简单。
+<div>
+    <img src='https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/1.gif' width="300px" style='border: #f1f1f1 solid 1px'/>
+    <img src='https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/2.gif' width="300px" style='border: #f1f1f1 solid 1px'/>
+</div>
 
 ### 关于 ABot
 
@@ -39,25 +39,25 @@ ABot 的目的是基于 AccessibilityEvent 实现对任意 APP 的自动化操�
 
 2. 节点之间使用 `>` 连接，表示一个节点路径，如下：
 
-```
-0:android.widget.FrameLayout>1:android.support.v4.view.ViewPager>0:android.widget.ListView>*:android.widget.LinearLayout`
-```
+    ```
+    0:android.widget.FrameLayout>1:android.support.v4.view.ViewPager>0:android.widget.ListView>*:android.widget.LinearLayout`
+    ```
 
 3. 节点配置
 
-支持节点配置文件，节点名和节点配置用 `=>` 连接，每行一条配置，如下
+    支持节点配置文件，节点名和节点配置用 `=>` 连接，每行一条配置，如下
 
-```
-key1  =>  expression1
-key2  =>  expression2
-```
+    ```
+    key1  =>  expression1
+    key2  =>  expression2
+    ```
 
-示例:
+    示例:
 
-```
-open_lucky_money   =>  0:android.widget.FrameLayout>3:android.widget.Button
-close_lucky_money  =>  0:android.widget.FrameLayout>*:android.widget.ImageView
-```
+    ```
+    open_lucky_money   =>  0:android.widget.FrameLayout>3:android.widget.Button
+    close_lucky_money  =>  0:android.widget.FrameLayout>*:android.widget.ImageView
+    ```
 
 ####  Action
 
