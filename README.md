@@ -86,8 +86,8 @@ MIT
 
 ### 致谢
 
-1.  本项目最初受该项目启发[WeChatLuckyMoney](https://github.com/geeeeeeeeek/WeChatLuckyMoney)
+1.  本项目最初受该项目启发 [WeChatLuckyMoney](https://github.com/geeeeeeeeek/WeChatLuckyMoney)
 
-2.  [代码家](https://github.com/daimajia) 同学的『一起来干货分享反馈群』，本插件开发测试过程，深得此群帮助。
+2.  [@代码家](https://github.com/daimajia) 同学的『一起来干货分享反馈群』，本插件开发测试过程，深得此群帮助。
 
 3.  感谢我的家人和朋友的支持，尤其是 [@咏枫](https://github.com/freedombird9/) 催促我完成此项目。
