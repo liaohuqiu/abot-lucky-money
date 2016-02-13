@@ -1,14 +1,4 @@
-group_member_manager            =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>0:android.widget.LinearLayout>2:android.widget.TextView
-group_member_add                =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>1:android.widget.ListView>*:android.widget.LinearLayout>0:android.widget.LinearLayout>*0:android.widget.RelativeLayout>0:android.widget.ImageView
-group_member_remove             =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>1:android.widget.ListView>*:android.widget.LinearLayout>0:android.widget.LinearLayout>*1:android.widget.RelativeLayout>0:android.widget.ImageView
-more_function                   =>  0:android.widget.FrameLayout>0:android.view.ViewGroup>2:android.widget.RelativeLayout
 go_back                         =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>0:android.widget.LinearLayout>0:android.widget.LinearLayout>0:android.widget.ImageView|parent=1
-chat_room_ok                    =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>0:android.view.ViewGroup>2:android.widget.TextView
-chat_room_create                =>  0:android.widget.FrameLayout>0:android.widget.ListView>0:android.widget.LinearLayout>0:android.widget.TextView|parent=1
-
-contact_item                    =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>1:android.widget.ListView>*:android.widget.RelativeLayout|childCount=2>0:android.widget.TextView
-chat_room_list_view             =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>1:android.widget.ListView
-
 new_message                     =>  0:android.widget.FrameLayout>*:android.support.v4.view.ViewPager>0:android.widget.ListView>*:android.widget.LinearLayout>0:android.widget.TextView|parent=1
 message_item                    =>  0:android.widget.FrameLayout>*:android.support.v4.view.ViewPager>0:android.widget.ListView>*:android.widget.LinearLayout
 go_back_in_lucky_money_detail   =>  0:android.widget.FrameLayout>0:android.widget.FrameLayout>1:android.view.ViewGroup|childCount=3>0:android.widget.LinearLayout>0:android.widget.ImageView|parent=1
@@ -16,3 +6,4 @@ chat_item_lucky_money           =>  0:android.widget.FrameLayout>0:android.widge
 open_lucky_money                =>  0:android.widget.FrameLayout>3:android.widget.Button
 close_lucky_money               =>  0:android.widget.FrameLayout>*:android.widget.ImageView
 open_lucky_money_loading        =>  0:android.widget.FrameLayout>0:android.widget.LinearLayout>0:android.widget.ProgressBar
+more_function                   =>  0:android.widget.FrameLayout>0:android.view.ViewGroup>2:android.widget.RelativeLayout

@@ -10,17 +10,13 @@ import in.srain.abot.element.Element;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Can not define action in queue action or hit-nay action
- */
 public class ActionParser {
-
-    private static final String CHAR_DEFINE = "=>";
-    private static final String CHAR_FOR_SINGLE_ACTION = ":";
 
     public static final String CHAR_FOR_AND_ACTION = "->";
     public static final String CHAR_FOR_BRANCH_ACTION = "~>";
     public static final String CHAR_FOR_OR_ACTION = "|";
+    private static final String CHAR_DEFINE = "=>";
+    private static final String CHAR_FOR_SINGLE_ACTION = ":";
     private static final String CHAR_FOR_OR_ACTION_SP = "\\|";
 
     private static final String CHAR_COMMENT = "//";
@@ -36,6 +32,12 @@ public class ActionParser {
 
     private static final Map<String, String> sMap = new HashMap<>();
 
+    /**
+     * parse action from config
+     *
+     * @param content
+     * @return
+     */
     public static BaseAction parse(String content) {
 
         String[] lines = content.split("\n");
@@ -47,7 +49,7 @@ public class ActionParser {
         return mainAction;
     }
 
-    public static void parseLine(String content) {
+    private static void parseLine(String content) {
         if (TextUtils.isEmpty(content) || !content.contains(CHAR_DEFINE)) {
             return;
         }
@@ -111,15 +113,6 @@ public class ActionParser {
         return action;
     }
 
-    private static BaseAction parseActionForCondition(String actionName) {
-        if (!sMap.containsKey(actionName)) {
-            throw new IllegalArgumentException("Can not find definition for this action: " + actionName);
-        }
-        String actionDefinition = sMap.get(actionName);
-        BaseAction itemAction = parseAction(actionName, actionDefinition);
-        return itemAction;
-    }
-
     private static BaseAction parseOrAction(String patten) {
         String[] items = patten.split(CHAR_FOR_OR_ACTION_SP);
         BaseConditionAction action = new OrAction();
@@ -131,6 +124,15 @@ public class ActionParser {
             }
         }
         return action;
+    }
+
+    private static BaseAction parseActionForCondition(String actionName) {
+        if (!sMap.containsKey(actionName)) {
+            throw new IllegalArgumentException("Can not find definition for this action: " + actionName);
+        }
+        String actionDefinition = sMap.get(actionName);
+        BaseAction itemAction = parseAction(actionName, actionDefinition);
+        return itemAction;
     }
 
     private static BaseAction parseSingleAction(String patten) {
@@ -145,7 +147,7 @@ public class ActionParser {
 
         switch (name) {
             case ACTION_TRY_CLICK:
-                action = new ClickAction(Element.getElement(definition));
+                action = new ClickElementAction(Element.getElement(definition));
                 break;
 
             case ACTION_DELAY:

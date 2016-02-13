@@ -6,11 +6,11 @@ import in.srain.abot.element.Element;
 
 import java.util.List;
 
-public class ClickAction extends SimpleAction {
+public class ClickElementAction extends SimpleAction {
 
     private Element mElement;
 
-    public ClickAction(Element targetElement) {
+    public ClickElementAction(Element targetElement) {
         mElement = targetElement;
     }
 

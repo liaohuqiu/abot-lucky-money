@@ -1,4 +1,4 @@
-package in.srain.apps.wechatbot;
+package in.srain.apps.amoney;
 
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
@@ -8,7 +8,7 @@ import in.srain.abot.action.BaseAction;
 import in.srain.abot.action.ElementClickFilter;
 import in.srain.abot.element.AccessibilityNodeInfoSpec;
 import in.srain.abot.element.Element;
-import in.srain.apps.wechatbot.wechat.WeChatElementFilter;
+import in.srain.apps.amoney.wechat.WeChatElementFilter;
 import in.srain.cube.util.CLog;
 
 import java.util.Iterator;

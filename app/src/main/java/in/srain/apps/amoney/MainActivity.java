@@ -1,8 +1,9 @@
-package in.srain.apps.wechatbot;
+package in.srain.apps.amoney;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
@@ -59,7 +60,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            String url = "https://github.com/liaohuqiu/abot-lucky-money";
+            Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(myIntent);
             return true;
         }
 

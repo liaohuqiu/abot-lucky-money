@@ -1,4 +1,4 @@
-package in.srain.apps.wechatbot;
+package in.srain.apps.amoney;
 
 import android.accessibilityservice.AccessibilityService;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.view.accessibility.AccessibilityEvent;
 import in.srain.abot.action.ActionParser;
 import in.srain.abot.action.BaseAction;
 import in.srain.abot.element.Element;
-import in.srain.apps.wechatbot.wechat.WeChatElementFilter;
+import in.srain.apps.amoney.wechat.WeChatElementFilter;
 import in.srain.cube.cache.DiskFileUtils;
 
 public class AppService extends AccessibilityService {

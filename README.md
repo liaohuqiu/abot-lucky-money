@@ -1,9 +1,17 @@
-ABot 是一个 AccessibilityEvent 驱动的动作引擎。
+本项目基于 ***ABot*** 实现了微信抢红包功能插件，功能截图如下：
 
-本项目基于 ABot 实现了微信抢红包功能插件，功能截图如下：
+<div><img src='https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/1.gif' width="300px" style='border: #f1f1f1 solid 1px'/></div>
 
+<div><img src='https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/2.gif' width="300px" style='border: #f1f1f1 solid 1px'/></div>
+
+[点击下载 APK](https://raw.githubusercontent.com/liaohuqiu/abot-lucky-money/master/art/app-debug.apk)
+
+
+设计思路和代码实现都非常简单。
 
 ### 关于 ABot
+
+ABot 是一个 AccessibilityEvent 驱动的动作引擎。
 
 ABot 的目的是基于 AccessibilityEvent 实现对任意 APP 的自动化操作。
 
@@ -68,3 +76,16 @@ ABot 引入 Action 概念，Event 驱动 Action 完成，通过不同的 Action 
     2.  `OrAction`， 事件将同时派发到每个子 Action，直到所有完成。
 
     3.  `BranchAction`，按顺序派发事件给各个 Action， 如果事件被某个 Action 完成，则会继续派发到此 Action 直到该 Action 完成。
+
+
+### 许可协议
+
+MIT
+
+### 致谢
+
+1.  本项目最初受该项目启发[WeChatLuckyMoney](https://github.com/geeeeeeeeek/WeChatLuckyMoney)
+
+2.  [代码家]() 同学的『一起来干货分享反馈群』，本插件开发测试过程，深得此群帮助。
+
+3.  感谢我的家人和朋友的支持，尤其是 [@咏枫]() 催促我完成此项目。

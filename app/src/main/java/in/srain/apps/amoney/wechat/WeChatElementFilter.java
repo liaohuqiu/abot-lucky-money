@@ -1,4 +1,4 @@
-package in.srain.apps.wechatbot.wechat;
+package in.srain.apps.amoney.wechat;
 
 import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
 import android.text.TextUtils;

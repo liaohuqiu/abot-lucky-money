@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">aMoney</string>
+    <string name="action_about">关于</string>
+    <string name="text_open_wechat">打开微信</string>
+    <string name="text_bot_on">开启插件</string>
+    <string name="text_bot_off">停用插件</string>
+    <string name="text_reset">重置</string>
+</resources>

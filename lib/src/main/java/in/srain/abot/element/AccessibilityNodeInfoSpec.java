@@ -15,6 +15,7 @@ public class AccessibilityNodeInfoSpec {
     private static String CHAR_PIPE = "|";
     private static String CHAR_LEFT_BRACKET = "[";
     private static String CHAR_RIGHT_BRACKET = "]";
+
     private int mIndex;
     private CharSequence mClassName;
 
@@ -23,6 +24,12 @@ public class AccessibilityNodeInfoSpec {
         mClassName = className;
     }
 
+    /**
+     * return the identify string of a node
+     *
+     * @param nodeInfo
+     * @return
+     */
     public static String withNodeInfo(AccessibilityNodeInfo nodeInfo) {
         if (nodeInfo == null) {
             return null;
@@ -30,6 +37,11 @@ public class AccessibilityNodeInfoSpec {
         return String.format(":[text: %s; contentDescription: %s]", nodeInfo.getText(), nodeInfo.getContentDescription());
     }
 
+    /**
+     * print all the tree information about this node
+     *
+     * @param nodeInfo
+     */
     public static void printNodeMap(AccessibilityNodeInfo nodeInfo) {
         if (!ABotConst.DEBUG) {
             return;
@@ -41,6 +53,12 @@ public class AccessibilityNodeInfoSpec {
         printAllChildren(nodeInfo, list);
     }
 
+    /**
+     * print the path from root to this node
+     *
+     * @param nodeInfo
+     * @return
+     */
     public static String pathToNode(AccessibilityNodeInfo nodeInfo) {
         AccessibilityNodeInfo origin = nodeInfo;
         List<AccessibilityNodeInfoSpec> list = new ArrayList<AccessibilityNodeInfoSpec>();
@@ -85,6 +103,12 @@ public class AccessibilityNodeInfoSpec {
         }
     }
 
+    /**
+     * Using the identity of this node and it's children to identify this node
+     *
+     * @param nodeInfo
+     * @return
+     */
     public static String getNodeIdentity(AccessibilityNodeInfo nodeInfo) {
         if (nodeInfo == null) {
             return null;

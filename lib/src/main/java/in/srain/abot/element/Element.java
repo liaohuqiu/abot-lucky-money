@@ -8,9 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * | parent: return level, childCount: match child count
- */
 public class Element {
 
     public static final String CHAR_DEFINE = "=>";
@@ -21,9 +18,15 @@ public class Element {
     public static final String CHAR_SP_EQUAL = "=";
     public static final String CHAR_AND = "&";
 
+    // how many children should it have?
     public static final String ATTR_COUNT = "childCount";
+
+    // go back to parent
     public static final String ATTR_PARENT = "parent";
+
+    // contain some text
     public static final String ATTR_TEXT_CONTAINS = "textContains";
+
     private static Map<String, Element> sMap = new HashMap<>();
     private static List<AccessibilityNodeInfo> EMPTY_LIST = new ArrayList<AccessibilityNodeInfo>();
     private String mName;
@@ -33,7 +36,7 @@ public class Element {
     public Element(String name, String patten) {
         mName = name;
         mPatten = patten;
-        init();
+        readNodeList();
     }
 
     public static Element getElement(String key) {
@@ -44,9 +47,12 @@ public class Element {
         }
     }
 
-    public static void checkAllElements(AccessibilityNodeInfo nodeInfo) {
-    }
-
+    /**
+     * Parse all the elements from config
+     *
+     * @param content
+     * @return
+     */
     public static Map<String, Element> parse(String content) {
         Map<String, Element> map = new HashMap<String, Element>();
         String[] lines = content.split("\n");
@@ -202,7 +208,7 @@ public class Element {
         return mName;
     }
 
-    private void init() {
+    private void readNodeList() {
         String elements[] = mPatten.split(CHAR_SP_COMMA);
         for (int i = 1; i < elements.length; i++) {
             String item = elements[i];

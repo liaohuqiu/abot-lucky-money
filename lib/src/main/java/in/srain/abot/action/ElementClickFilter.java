@@ -3,6 +3,9 @@ package in.srain.abot.action;
 import android.view.accessibility.AccessibilityNodeInfo;
 import in.srain.abot.element.Element;
 
+/**
+ * Decide which element should be clicked.
+ */
 public abstract class ElementClickFilter {
 
     private static ElementClickFilter sFilter;

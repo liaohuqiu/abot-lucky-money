@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="in.srain.apps.wechatbot.MainActivity"
+    tools:context="in.srain.apps.amoney.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_margin="10dp"
         android:background="#eeeeee"
         android:padding="10dp"
-        android:text="@string/text_restart"
+        android:text="@string/text_reset"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp" />

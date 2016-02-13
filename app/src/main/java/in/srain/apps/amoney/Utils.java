@@ -1,4 +1,4 @@
-package in.srain.apps.wechatbot;
+package in.srain.apps.amoney;
 
 import android.content.Intent;
 import android.os.Bundle;
